@@ -6,24 +6,18 @@ public class QuickSort {
         quickSort(data, 0, data.length - 1);
     }
 
-    public void quickSort(int[] array, int lowerBound, int upperBound) {
-        if (lowerBound >= upperBound) return;
-
-        int pivot = array[upperBound];
-
-        int i = lowerBound - 1;
-        int j = lowerBound;
-
-        while (j < upperBound) {
-            if (array[j] <= pivot) {
-                int temp = array[++i]; array[i] = array[j]; array[j] = temp;
+    private void quickSort(int[] array, int l, int r) {
+        int i = l, j = r, h;
+        int m = array[(l + r) / 2];
+        do {
+            while (array[i] < m) i++;
+            while (array[j] > m) j--;
+            if (i <= j) {
+                h = array[i]; array[i] = array[j]; array[j] = h;
+                i++; j--;
             }
-            ++j;
-        }
-
-        int temp = array[i + 1]; array[i + 1] = array[upperBound]; array[upperBound] = temp;
-
-        quickSort(array, lowerBound, i);
-        quickSort(array, i + 1, upperBound);
+        } while (i<=j);
+        if (l < j) quickSort(array, l, j);
+        if (i < r) quickSort(array, i, r);
     }
 }
