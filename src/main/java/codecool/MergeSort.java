@@ -25,9 +25,8 @@ public class MergeSort {
     }
 
     private void mergeSort(int l, int r) {
-        int m;
         if (l < r) {
-            m = (l + r) / 2;
+            int m = (l + r) / 2;
             mergeSort(l, m);
             mergeSort(m + 1, r);
             merge(l, m, r);
