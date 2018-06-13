@@ -15,18 +15,18 @@ public class MergeSort {
             int m = (l + r) / 2;
             mergeSort(l, m);
             mergeSort(m + 1, r);
-            merge(l, m, r);
+            merge(l, m , r);
         }
     }
 
     private void merge(int l, int m, int r) {
         int i, j, q;
 
-        for(i = l; i <= r; i++) tempArray[i] = array[i];
+        for(i = l; i <= r; i ++) tempArray[i] = array[i];
 
         i = l; j = m + 1; q = l;
 
-        while(i <= m && j <= r) {
+        while (i <= m && j <= r) {
             if(tempArray[i] < tempArray[j]) {
                 array[q++] = tempArray[i++];
             } else {

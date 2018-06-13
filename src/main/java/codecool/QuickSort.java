@@ -3,7 +3,7 @@ package codecool;
 public class QuickSort {
 
     public void sort(int[] array) {
-        quickSort(array, 0, array.length - 1);
+        quickSort(array, 0 , array.length - 1);
     }
 
     private void quickSort(int[] array, int l, int r) {
@@ -19,7 +19,8 @@ public class QuickSort {
             }
         } while (i <= j);
 
-        if(l < j) quickSort(array, l, j);
-        if(i < r) quickSort(array, i, r);
+        if (l < j) quickSort(array, l, j);
+        if (i < r) quickSort(array, i, r);
+
     }
 }
