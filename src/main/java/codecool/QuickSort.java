@@ -7,19 +7,19 @@ public class QuickSort {
     }
 
     private void quickSort(int[] array, int l, int r) {
-        int i = l, j = r, temp;
+        int i = l, j = r;
         int m = array[(l + r) / 2];
 
         do {
             while (array[i] < m) i++;
             while (array[j] > m) j--;
-            if (i <= j) {
-                temp = array[i]; array[i] = array[j]; array[j] = temp;
+            if(i <= j) {
+                int temp = array[i]; array[i] = array[j]; array[j] = temp;
                 i++; j--;
             }
         } while (i <= j);
-        if (l < j) quickSort(array, l, j);
-        if (i < r) quickSort(array, i, r);
+
+        if(l < j) quickSort(array, l, j);
+        if(i < r) quickSort(array, i, r);
     }
 }
-

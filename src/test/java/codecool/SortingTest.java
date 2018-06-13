@@ -10,7 +10,7 @@ public class SortingTest {
 
     int[] numbers;
     int[] sortedNumbers;
-    final static int AMOUNT = 21115;
+    final static int AMOUNT = 20000;
 //    final static int AMOUNT = 5;
     final static int LESS_THAN = 11;
 
