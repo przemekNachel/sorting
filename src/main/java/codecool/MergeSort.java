@@ -2,7 +2,7 @@ package codecool;
 
 public class MergeSort {
 
-    int[] array, tempArray;
+    private int[] array, tempArray;
 
     public void sort(int[] array) {
         this.array = array;
